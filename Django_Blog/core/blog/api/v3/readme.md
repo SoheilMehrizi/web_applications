@@ -1,0 +1,1 @@
+this version of Apis are designed by generic views.

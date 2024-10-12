@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    LogIn
+{% endblock title %}
+    
+{% block content %}
+    
+    <div class="content" id="login">
+        <div class="container" style="height:400px" id="rl1">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                <div class="row justify-content-center" id="row-1">
+                    <div class="col-md-12" id="cl1">
+                        <h3><strong>Register Your Project</strong></h3>
+                        <form action="{% url 'PRV' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name"
+                                class="form-label">Name</label>
+                                <input type="next"
+                                name="name"
+                                class="form-control"
+                                id="name">
+                            </div> 
+                            <div class="mb-3">
+                                <label for="co_name"
+                                class="form-label">co_name</label>
+                                <input type="text"
+                                name="co_name"
+                                class="form-control"
+                                id="co_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name"
+                                class="form-label">tendency</label>
+                                <input type="text"
+                                name="tendency"
+                                class="form-control"
+                                id="tendensy">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email_address"
+                                class="form-label">email_address</label>
+                                <input type="mail"
+                                 name="email"
+                                class="form-control"
+                                id="email_address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Phone"
+                                class="form-label">Phone</label>
+                                <input type="text"
+                                name="phone"
+                                class="form-control"
+                                id="Phone">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control form-select-sm" name="service" aria-label=".form-select-sm example">
+                                    <option selected>Open this select menu</option>
+                                    {% for item in service %}
+                                        <option value="{{item}}">{{item}}</option>
+                                    {% endfor %}
+                                    
+                                </select>
+                            </div>
+                                <button type="submit" class="btn btn-warning">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+{% endblock %}

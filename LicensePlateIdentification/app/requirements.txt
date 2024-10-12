@@ -1,0 +1,7 @@
+tensorflow
+fastapi
+uvicorn
+opencv-python
+pytesseract
+redis
+requests

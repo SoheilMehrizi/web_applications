@@ -1,0 +1,14 @@
+# general Modules
+Django>=3.2,<4.0
+psycopg2>=2.8
+python-decouple
+pillow
+djangorestframework
+
+# Third Party Modules
+django-filter
+coreapi
+redis
+drf-yasg[validation]
+
+# Deployment Modules
